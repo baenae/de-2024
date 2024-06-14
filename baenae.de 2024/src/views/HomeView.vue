@@ -1,0 +1,19 @@
+<template>
+	<main>
+		<h2>Herzlich willkommen auf</h2>
+		<h1>baenae.de</h1>
+		<p>
+			Moin, ich bin Bänä, Fotograf aus Bremen.
+		</p>
+
+		<img class="contentImage">
+
+		<p>
+			Auf dieser Seite präsentiere ich dir meine Arbeit und meine Leistungen, die du bei mir bekommen kannst.
+			Möchtest du ein Shooting? Für dich, deine Familie, deine Firma, deine Band oder deinen Verein?
+		</p>
+		<p>
+			Dann bist du bei mir goldrichtig. Mit meiner ruhigen und gelassenen Art schaffe ich für dich das perfekte Shooting.
+		</p>
+	</main>
+</template>
