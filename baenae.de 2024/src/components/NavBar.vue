@@ -4,20 +4,28 @@
 <template>
 	<Header>
 		<div id="logo">
-			<img
-				src="../assets/logo-with-ribbon.png"
-				alt="Logo baenae"
-				title="Logo baenae"
-			>
+			<router-link to="/">
+				<img
+					src="../assets/logo-with-ribbon.png"
+					alt="Logo baenae"
+					title="Logo baenae"
+				>
+			</router-link>
 		</div>
 
 		<div id="header-content">
 			<ul>
 				<li>
-					<router-link to="/">Home</router-link>
+					<router-link to="/leistungen">Leistungen</router-link>
 				</li>
 				<li>
-					<router-link to="/">About</router-link>
+					<router-link to="/about">Portfolio</router-link>
+				</li>
+				<li>
+					<router-link to="/about">Über mich</router-link>
+				</li>
+				<li>
+					<router-link to="/about">Kontakt</router-link>
 				</li>
 			</ul>
 		</div>
@@ -47,28 +55,35 @@
 			}
 		}
 
+		@media only screen and (max-width: 1200px) {
+			#logo {
+				margin: 0;
+				left: -3px;
+			}
+		}
+
 		#header-content {
 			width: 100%;
 			height: 50px;
-			//background-color: deeppink !important;
 
 			ul {
-				display: flex;
-				align-items: start;
-				justify-content: left;
-				//background-color: orchid !important;
-
+				width: 100%;
+				display: inline;
 
 				li {
+					display: inline;
+
 					color: black;
 					list-style: none;
-					//background-color: cadetblue;
-					margin: 0px 20px 0 0;
-					padding: 0;
+					padding-right: 15px;
 
 					a {
 						text-decoration: none;
 						color: black;
+					}
+
+					a:hover {
+						text-decoration: underline;
 					}
 				}
 			}

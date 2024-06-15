@@ -1,11 +1,13 @@
 <template>
-	<div id="teaser-image">
-		<img src="../assets/teaserimages/hafen-bw.jpg" alt=""> />
+	<div
+		class="teaser-image"
+	>
+
 	</div>
 </template>
 
 <style scoped>
-	#teaser-image {
+	.teaser-image {
 		position: relative;
 		top: 0;
 		left: 0;
@@ -16,10 +18,12 @@
 		background-color: black;
 		overflow: hidden;
 
-		img {
-			width: 100%;
-			height: auto;
-		}
+		background-image: url("../assets/teaser-images/hafen-bw.jpg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+
+		pointer-events: none;
 	}
 
 	@media only screen and (max-width: 1200px) {

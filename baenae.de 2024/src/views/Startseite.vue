@@ -6,7 +6,12 @@
 			Moin, ich bin Bänä, Fotograf aus Bremen.
 		</p>
 
-		<img class="contentImage">
+		<img
+			class="contentImage"
+			src="../assets/content-images/home.jpg"
+			alt="Foto von Baenae auf einer Couch mit Blitzlichern"
+			title="Baenae"
+		>
 
 		<p>
 			Auf dieser Seite präsentiere ich dir meine Arbeit und meine Leistungen, die du bei mir bekommen kannst.
@@ -17,3 +22,7 @@
 		</p>
 	</main>
 </template>
+<script
+	setup
+	lang="ts">
+</script>
