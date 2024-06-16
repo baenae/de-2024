@@ -4,31 +4,31 @@
 		<h1>Leistungen</h1>
 
 		<TeaserLink
-			image="../assets/teaser-images/hafen-bw.jpg"
+			image="./src/assets/teaser-images/business-shooting.jpg"
 			headline="Business Shooting"
 			text="Individuell zugeschnittenes Shooting. Egal ob Start-Up, großes Unternehmen, Band oder Gastro."
-			link="home"
+			link="/leistungen-business"
 		/>
 
 		<TeaserLink
-			image="../assets/teaser-images/hafen-bw.jpg"
+			image="./src/assets/teaser-images/privates-shooting.jpg"
 			headline="Privates Shooting"
 			text="Persönliches und individuelles Shooting. Portraits, Babybauch, Paare, Familie, After Wedding, Bands, Sensual und Akt."
-			link="leistungen"
+			link="/leistungen-privatesshooting"
 		/>
 
 		<TeaserLink
-			image="../assets/teaser-images/hafen-bw.jpg"
+			image="./src/assets/teaser-images/tfp-shooting.jpg"
 			headline="TFP Shooting"
 			text="Model und Fotograf arbeiten zusammen, um ihr Portfolio zu erweitern."
-			link="aboutmet"
+			link="/leistungen-tfpshooting"
 		/>
 
 		<TeaserLink
-			image="../assets/teaser-images/hafen-bw.jpg"
+			image="./src/assets/teaser-images/bildverkauf.jpg"
 			headline="Bild Verkauf"
 			text="Land und Citybilder als Druck oder Poster."
-			link="startseite"
+			link="/leistungen-bildverkauf"
 		/>
 
 	</main>

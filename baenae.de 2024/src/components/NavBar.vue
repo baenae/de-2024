@@ -2,7 +2,7 @@
 </script>
 
 <template>
-	<Header>
+	<Header id="header">
 		<div id="logo">
 			<router-link to="/">
 				<img
@@ -19,13 +19,13 @@
 					<router-link to="/leistungen">Leistungen</router-link>
 				</li>
 				<li>
-					<router-link to="/about">Portfolio</router-link>
+					<router-link to="/portfolio">Portfolio</router-link>
 				</li>
 				<li>
-					<router-link to="/about">Über mich</router-link>
+					<router-link to="/ueber-mich">Über mich</router-link>
 				</li>
 				<li>
-					<router-link to="/about">Kontakt</router-link>
+					<router-link to="/kontakt">Kontakt</router-link>
 				</li>
 			</ul>
 		</div>
@@ -33,7 +33,7 @@
 </template>
 
 <style lang="scss" scoped>
-	Header {
+	#header {
 		width: 100%;
 		height: 50px;
 		background-color: white;
@@ -73,9 +73,13 @@
 				li {
 					display: inline;
 
+					font-family: Roboto;
+					font-style: normal;
+					font-size: 16px;
+
 					color: black;
 					list-style: none;
-					padding-right: 15px;
+					padding-right: 22px;
 
 					a {
 						text-decoration: none;

@@ -1,16 +1,18 @@
 <template>
 	<div
-		class="teaser-link"
+		:class="['teaser-link', { 'topLine': topLine} ]"
 	>
 		<div class="image">
-			<img :src="image">
+			<router-link :to="link">
+				<img :src="image">
+			</router-link>
 		</div>
 
 		<div class="text">
 			<h3>{{ headline }}</h3>
 			<p>{{ text }}</p>
 			<div>
-				<router-link :to="'/' + link">Mehr erfahren</router-link>
+				<router-link :to="link">Mehr erfahren</router-link>
 				<img src="../assets/chevron-double-right.svg">
 			</div>
 		</div>
@@ -39,16 +41,27 @@ export default defineComponent({
 			link: {
 				type: String,
 				default: ""
+			},
+			topLine: {
+				type: Boolean,
+				default: false
 			}
 		}
 	});
 </script>
-<style scoped>
+<style scoped lang="scss">
+#app {
 	.teaser-link {
 		width: 100%;
 		padding-bottom: 20px;
 		margin-bottom: 20px;
 		border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+		&.topLine {
+			border-top: 1px solid rgba(0, 0, 0, 0.3);
+			margin-top: 20px;
+			padding-top: 20px;
+		}
 
 		display: flex;
 
@@ -70,9 +83,12 @@ export default defineComponent({
 			padding-left: 20px;
 
 			h3 {
-				font-family: Playfair Display;
-				font-size: 26px;
+				font-family: "Playfair Display", serif;
+				font-size: 22px;
+				color: #666666;
+				text-transform: uppercase;
 				margin-bottom: 7px;
+				margin-top: 7px;
 			}
 
 			div {
@@ -94,7 +110,6 @@ export default defineComponent({
 					height: 24px;
 				}
 
-
 				img {
 					width: 24px !important;
 					height: 24px;
@@ -106,4 +121,5 @@ export default defineComponent({
 	.teaser-link:last-child {
 		border-bottom: none;
 	}
+}
 </style>

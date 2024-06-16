@@ -14,8 +14,9 @@
 			<RouterView />
 
 			<Footer>
-				<router-link to="/about">Kontakt</router-link>
-				<router-link to="/about">Impressum</router-link>
+				<router-link to="/kontakt">Kontakt</router-link>
+				<router-link to="/impressum">Impressum</router-link>
+				<router-link to="/datenschutz">Datenschutzerklärung</router-link>
 			</Footer>
 		</div>
 	</div>
@@ -26,10 +27,6 @@
 		max-width: 730px;
 		width: 730px;
 		height: 100vh;
-
-		background-color: #F1EBE4;
-
-		overflow: auto;
 
 		#header-content,
 		#content {
@@ -55,11 +52,16 @@
 				margin: 50px 0 80px 0;
 				padding-top: 15px;
 
+				font-size: 16px;
+
 				text-align: center;
 
 				a {
 					color: #444444;
-					padding: 10px;
+					padding: 20px;
+
+					font-family: Roboto;
+					text-decoration: none;
 				}
 
 				a:hover {
@@ -88,6 +90,6 @@
 			width: 500px;
 		}
 
-		/* todo Menü ändern */
+		/* todo Mobile Menü */
 	}
 </style>

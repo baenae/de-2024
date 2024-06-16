@@ -1,8 +1,6 @@
 <template>
-	<div
-		class="teaser-image"
-	>
-
+	<div class="teaser-image">
+		<div></div>
 	</div>
 </template>
 
@@ -15,15 +13,26 @@
 		width: calc(100vw - 730px);
 		height: 100vh;
 
-		background-color: black;
-		overflow: hidden;
+		div {
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 999;
 
-		background-image: url("../assets/teaser-images/hafen-bw.jpg");
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
+			width: calc(100vw - 730px);
+			height: 100vh;
 
-		pointer-events: none;
+			background-color: black;
+			overflow: hidden;
+
+			background-image: url("../assets/teaser-images/weserstadion_xl.jpg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+
+			pointer-events: none;
+		}
+
 	}
 
 	@media only screen and (max-width: 1200px) {
