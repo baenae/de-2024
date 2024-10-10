@@ -9,7 +9,9 @@
 		</div>
 
 		<div class="text">
-			<h3>{{ headline }}</h3>
+			<router-link :to="link">
+				<h3>{{ headline }}</h3>
+			</router-link>
 			<p>{{ text }}</p>
 			<div>
 				<router-link :to="link">Mehr erfahren</router-link>
@@ -82,6 +84,10 @@ export default defineComponent({
 			width: calc(100% - 160px);
 			padding-left: 20px;
 
+			a {
+				text-decoration: none;
+			}
+
 			h3 {
 				font-family: "Playfair Display", serif;
 				font-size: 22px;
@@ -89,6 +95,7 @@ export default defineComponent({
 				text-transform: uppercase;
 				margin-bottom: 7px;
 				margin-top: 7px;
+
 			}
 
 			div {

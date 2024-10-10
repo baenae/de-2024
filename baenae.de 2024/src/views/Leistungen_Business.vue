@@ -28,7 +28,7 @@
 
 		<TeaserLink
 			:top-line="true"
-			image="./src/assets/teaser-images/teestuebchen.jpg"
+			image="./src/assets/teaser-link-images/teestuebchen.jpg"
 			headline="Teestübchen"
 			text="Individuell zugeschnittenes Shooting. Egal ob Start-Up, großes Unternehmen, Band oder Gastro."
 			link="portfolio"
