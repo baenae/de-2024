@@ -1,28 +1,41 @@
 <template>
 	<main>
-		<h2>Meine Arbeiten</h2>
+		<h2>Einige meiner Arbeiten</h2>
 		<h1>Portfolio</h1>
-		<p>
-			Sorry, meine Website wird gerade überarbeitet.
-			<img src="../assets/account-hard-hat.svg" width="200" height="200" style="margin-top: 20px"/>
 
-		</p>
-		<p>
-			Mein Portfolio findest du sonst auch auf Instagram.
-		</p>
-		<ul>
-			<li>
-				Instagram City & Landscape:
-				<a href="https://www.instagram.com/baenaeofficial/" target="_blank">@baenaeofficial</a>
-			</li>
-			<li>
-				Instagram Portraits:
-				<a href="https://www.instagram.com/baenae.de/" target="_blank">@baenae.de</a>
-			</li>
-			<li>
-				Instagram Warhammer:
-				<a href="https://www.instagram.com/baenae_de/" target="_blank">@baenae_de</a>
-			</li>
-		</ul>
+		<TeaserLink
+			:top-line="false"
+			image="./src/assets/teaser-link-images/portfolio_business.jpg"
+			headline="Business Fotografie"
+			text="Individuell zugeschnittenes Shooting. Egal ob Start-Up, großes Unternehmen, Band oder Gastro."
+			link="portfolio-business"
+		/>
+
+		<TeaserLink
+			:top-line="false"
+			image="./src/assets/teaser-link-images/portfolio_portraits.jpg"
+			headline="Portraits"
+			text="Portraitfotografie fängt die Persönlichkeit eines Menschen ein."
+			link="portfolio-portraits"
+		/>
+
+		<TeaserLink
+			:top-line="false"
+			image="./src/assets/teaser-link-images/portfolio_akt.jpg"
+			headline="Akt Fotografie"
+			text="Ästhetischen Darstellung des nackten Körpers und betont dessen Formen, Linien und Ausdruck"
+			link="portfolio-akt"
+		/>
+
+		<TeaserLink
+			:top-line="false"
+			image="./src/assets/teaser-link-images/portfolio_stadtlandschaft.jpg"
+			headline="Land- und Stadtfotografie"
+			text="Fotos von Bremen und der Welt."
+			link="portfolio-stadtlandschaft"
+		/>
 	</main>
 </template>
+<script setup lang="ts">
+import TeaserLink from '@/components/TeaserLink.vue'
+</script>

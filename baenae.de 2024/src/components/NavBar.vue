@@ -1,37 +1,75 @@
-<script setup lang="ts">
-</script>
-
 <template>
-	<Header id="header">
-		<div id="logo">
-			<router-link to="/">
-				<img
-					src="../assets/logo-with-ribbon.png"
-					alt="Logo baenae"
-					title="Logo baenae"
-				>
-			</router-link>
+	<div id="sidemenu">
+		<transition name="translateX">
+			<nav v-show="navOpen">
+				<div class="sidemenuWrapper">
+					<ul>
+						<li>
+							<span v-on:click="openPage('/leistungen')">Leistungen</span>
+							<ul>
+								<li v-on:click="openPage('/leistungen-business')">Business Shooting</li>
+								<li v-on:click="openPage('/leistungen-privatesshooting')">Privates Shooting</li>
+								<li v-on:click="openPage('/leistungen-tfpshooting')">TFP-Shooting</li>
+								<li v-on:click="openPage('/leistungen-bildverkauf')">Bildverkauf</li>
+							</ul>
+
+						</li>
+						<li>
+							<span v-on:click="openPage('/portfolio')">Portfolio</span>
+							<ul>
+								<li v-on:click="openPage('/portfolio-business')">Business</li>
+								<li v-on:click="openPage('/portfolio-portraits')">Portraits</li>
+								<li v-on:click="openPage('/portfolio-akt')">Akt</li>
+								<li v-on:click="openPage('/portfolio-stadtlandschaft')">Stadt & Landschaft</li>
+							</ul>
+						</li>
+						<li>
+							<span v-on:click="openPage('/ueber-mich')">Über mich</span>
+						</li>
+						<li>
+							<span v-on:click="openPage('/kontakt')">Kontakt</span>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</transition>
+	</div>
+
+	<div id="header">
+		<div id="logo" v-on:click="openPage('/')">
+			<img
+				src="../assets/logo-with-ribbon.png"
+				alt="Logo baenae"
+				title="Logo baenae"
+			>
 		</div>
 
-		<div id="header-content">
-			<ul>
-				<li>
-					<router-link to="/leistungen">Leistungen</router-link>
-				</li>
-				<li>
-					<router-link to="/portfolio">Portfolio</router-link>
-				</li>
-				<li>
-					<router-link to="/ueber-mich">Über mich</router-link>
-				</li>
-				<li>
-					<router-link to="/kontakt">Kontakt</router-link>
-				</li>
-			</ul>
-		</div>
-	</Header>
+		<button id="burgerMenu" v-on:click="navOpen=!navOpen" v-bind:class="{active:navOpen}">
+			<span class="top"></span>
+			<span class="mid"></span>
+			<span class="bottom"></span>
+		</button>
+	</div>
 </template>
+<script lang="ts">
+	import { defineComponent } from "vue";
+	import router from "@/router";
 
+	export default defineComponent({
+		name: "NavBar",
+		data() {
+			return {
+				navOpen: false
+			}
+		},
+		methods: {
+			openPage(page: string) {
+				this.navOpen = false;
+				router.push(page);
+			}
+		}
+	});
+</script>
 <style lang="scss" scoped>
 	#header {
 		width: 100%;
@@ -46,6 +84,8 @@
 		#logo {
 			position: absolute;
 
+			cursor: pointer;
+
 			margin: 0 20px 0 20px;
 			width: calc(240px / 3);
 			height: auto;
@@ -55,42 +95,127 @@
 			}
 		}
 
-		@media only screen and (max-width: 1200px) {
-			#logo {
-				margin: 0;
-				left: -3px;
+		#burgerMenu {
+			position: absolute;
+			top: 0;
+			right: 15px;
+
+			color: black;
+			background-color: white;
+
+			width: 50px;
+			height: 50px;
+			border: none;
+			z-index: 10000;
+			appearance: none;
+			cursor: pointer;
+			outline: none;
+
+			span {
+				display: block;
+				width: 20px;
+				height: 3px;
+				margin: auto;
+				background: black;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				transition: all .4s ease;
+
+				&.top {
+					transform: translateY(-8px);
+				}
+
+				&.bottom {
+					transform: translateY(8px);
+				}
+			}
+
+			&.active{
+				.top {
+					transform: rotate(-45deg);
+				}
+				.mid{
+					transform: translateX(-20px) rotate(360deg);
+					opacity: 0;
+				}
+				.bottom {
+					transform: rotate(45deg);
+				}
 			}
 		}
+	}
 
-		#header-content {
-			width: 100%;
-			height: 50px;
+	#sidemenu {
+		nav {
+			width: 250px;
+			height: 100vh;
 
-			ul {
-				width: 100%;
-				display: inline;
+			padding: 25px 25px 50px 25px;
 
-				li {
-					display: inline;
+			background: white;
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 99;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.30);
+			border-radius: 0 0 0 10px;
 
-					font-family: Roboto;
-					font-style: normal;
-					font-size: 16px;
+			.sidemenuWrapper {
+				ul {
+					li {
+						list-style:none;
+						padding: 10px 0 10px 0;
 
-					color: black;
-					list-style: none;
-					padding-right: 22px;
+						cursor: pointer;
 
-					a {
-						text-decoration: none;
+						font-family: Roboto;
+
+						span {
+							font-weight: bold;
+						}
+
+						font-size: 16px;
+						text-transform: uppercase;
 						color: black;
-					}
 
-					a:hover {
-						text-decoration: underline;
+						text-decoration: none;
+
+						a:hover {
+							color: black;
+							text-decoration: underline;
+						}
+
+						ul {
+							padding: 5px 0 0 20px;
+
+							li {
+								padding: 5px 0 5px 0;
+								font-weight: normal;
+								text-transform: none;
+							}
+						}
+
 					}
 				}
 			}
 		}
+	}
+
+	.translateX-enter{
+		transform:translateX(200px);
+		opacity: 0;
+	}
+
+	.translateX-enter-active,.translateX-leave-active{
+		transform-origin: top left 0;
+		transition: 0.2s ease;
+	}
+
+	.translateX-leave-to{
+		transform: translateX(200px);
+		opacity: 0;
 	}
 </style>

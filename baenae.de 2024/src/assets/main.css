@@ -31,86 +31,104 @@ body {
 
     #app {
         display: flex;
+        #baenae-app {
 
-        main {
-            h1 {
-                font-family: "Playfair Display", serif;
-                font-style: normal;
-                font-size: 36px;
-                line-height: 36px;
-                margin: 3px 0 30px 0;
+            main {
+                h1 {
+                    font-family: "Playfair Display", serif;
+                    font-style: normal;
+                    font-size: 36px;
+                    line-height: 36px;
+                    margin: 3px 0 30px 0;
 
-                text-transform: uppercase;
-                padding: 0 10px 0 10px;
-            }
-
-            strong {
-                font-weight: bold;
-            }
-
-            a, p, ul, li {
-                font-family: "Roboto", sans-serif;
-                font-style: normal;
-                font-size: 16px;
-
-                color: black;
-            }
-
-            p, ul, li {
-                padding: 0 10px 0 10px;
-            }
-
-            ul {
-                li {
-                    list-style: square;
-                    padding: 0 0 5px 0;
-                    margin: 0 0 0 20px;
+                    text-transform: uppercase;
+                    padding: 0 10px 0 10px;
                 }
-            }
 
-            h2 {
-                font-family: "Roboto", sans-serif;
-                font-size: 13px;
-                margin: 50px 0 0 0;
-                padding: 0 10px 0 10px;
-            }
+                strong {
+                    font-weight: bold;
+                }
 
-            h3 {
-                font-family: "Roboto", sans-serif;
-                margin-top: 20px;
-                font-size: 18px;
-                font-weight: bold;
-                padding: 0 10px 3px 10px;
-            }
-
-            p {
-                line-height: 1.4;
-                margin-bottom: 20px;
-            }
-
-            .price {
-                font-size: 24px;
-                font-weight: bold;
-                padding: 0 10px 0 10px;
-
-                text-align: right;
-
-                span {
-                    font-size: 14px;
+                a, p, ul, li {
                     font-family: "Roboto", sans-serif;
+                    font-style: normal;
+                    font-size: 16px;
+
+                    color: black;
+                }
+
+                p, ul, li {
+                    padding: 0 10px 0 10px;
+                }
+
+                ul {
+                    li {
+                        list-style: square;
+                        padding: 0 0 5px 0;
+                        margin: 0 0 0 20px;
+                    }
+                }
+
+                h2 {
+                    font-family: "Roboto", sans-serif;
+                    font-size: 13px;
+                    margin: 50px 0 0 0;
+                    padding: 0 10px 0 10px;
+                }
+
+                h3 {
+                    font-family: "Roboto", sans-serif;
+                    margin-top: 20px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    padding: 0 10px 3px 10px;
+                }
+
+                p {
+                    line-height: 1.4;
+                    margin-bottom: 20px;
+                }
+
+                .price {
+                    font-size: 24px;
+                    font-weight: bold;
+                    padding: 0 10px 0 10px;
+
+                    text-align: right;
+
+                    span {
+                        font-size: 14px;
+                        font-family: "Roboto", sans-serif;
+                    }
                 }
             }
-        }
 
-        .contentImage {
-            width: 100%;
-            height: auto;
-            margin: 10px 0 20px 0;
+            .contentImage {
+                width: 100%;
+                height: auto;
+                margin: 10px 0 20px 0;
 
-            border: white 10px solid;
+                border: white 10px solid;
 
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.10);
-            border-radius: 2px;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.20);
+                border-radius: 2px;
+            }
+
+            .previewImages {
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+
+                img {
+                    width: calc(50% - 5px);
+                    height: auto;
+                    border: white 10px solid;
+
+                    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.20);
+                    border-radius: 2px;
+                }
+
+            }
         }
     }
 }

@@ -11,15 +11,17 @@
 		<NavBar />
 
 		<div id="content">
-			<transition name="slide-fade">
-				<RouterView />
-			</transition>
+			<router-view v-slot="{ Component }">
+				<transition name="fade">
+					<component :is="Component" />
+				</transition>
+			</router-view>
 
-			<Footer>
+			<div class="footer">
 				<router-link to="/kontakt">Kontakt</router-link>
 				<router-link to="/impressum">Impressum</router-link>
 				<router-link to="/datenschutz">Datenschutzerklärung</router-link>
-			</Footer>
+			</div>
 		</div>
 	</div>
 </template>
@@ -49,17 +51,21 @@
 		#content {
 			padding: 0 10px 0 10px;
 
-			footer {
+			.footer {
+				width: 100%;
+
 				border-top: 1px solid #999999;
-				margin: 50px 0 80px 0;
+				margin: 40px 0 40px 0;
 				padding-top: 15px;
 
-				font-size: 16px;
-
-				text-align: center;
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
 
 				a {
-					color: #444444;
+					width: auto;
+					font-size: 16px;
+					color: black;
 					padding: 20px;
 
 					font-family: Roboto;
@@ -73,39 +79,29 @@
 		}
 	}
 
-	@media only screen and (max-width: 1200px) {
-		#header-content,
-		#content {
-			max-width: 600px;
-			width: 600px;
-		}
-
-		#header-content {
-			margin-left: 80px;
-		}
-	}
-
 	@media only screen and (max-width: 1000px) {
-		#header-content,
-		#content {
-			max-width: 500px;
-			width: 500px;
+		#baenae-app {
+			max-width: 100vw;
+			width: 100vw;
+
+			#header-content,
+			#content {
+				max-width: 100vw;
+				width: 100vw;
+			}
+
+			/* todo Mobile Menü */
 		}
-
-		/* todo Mobile Menü */
 	}
 
-	.slide-fade-enter-active {
-		transition: all 0.3s ease-out;
+	.fade-enter-active {
+		transition: opacity 0.5s ease-out;
 	}
 
-	.slide-fade-leave-active {
-		transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-	}
-
-	.slide-fade-enter-from,
-	.slide-fade-leave-to {
-		transform: translateX(20px);
+	.fade-enter-from,
+	.fade-leave-to {
 		opacity: 0;
 	}
+
+
 </style>

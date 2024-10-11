@@ -35,15 +35,9 @@
 
 	}
 
-	@media only screen and (max-width: 1200px) {
-		#teaser-image {
-			width: calc(100vw - 600px);
-		}
-	}
-
 	@media only screen and (max-width: 1000px) {
-		#teaser-image {
-			width: calc(100vw - 500px);
+		.teaser-image {
+			display: none;
 		}
 	}
 </style>
