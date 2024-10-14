@@ -1,6 +1,6 @@
 <template>
 	<main>
-		<h2>Leistungen</h2>
+		<BreadcrumbNavigation :links="[{ url: '/leistungen', text: 'Leistungen' }]" />
 		<h1>Privates Shooting</h1>
 		<p>
 			Du möchtest von dir oder euch ein paar schöne Fotos haben?
@@ -28,7 +28,7 @@
 			<li>perfekt für Bewerbungungen, Tinder oder Instagram</li>
 			<li>leider wetterabhängig</li>
 		</ul>
-		<div class="price">75,00 <span>Euro</span></div>
+		<div class="price">100,00 <span>Euro</span></div>
 
 
 		<h3>STANDARD</h3>
@@ -42,7 +42,7 @@
 			<li>perfekt für alles</li>
 			<li>Blitz und/oder LED-Dauerlicht</li>
 		</ul>
-		<div class="price">250,00 <span>Euro</span></div>
+		<div class="price">300,00 <span>Euro</span></div>
 
 		<h3>PREMIUM</h3>
 		<p>
@@ -56,12 +56,25 @@
 			<li>Blitz und/oder LED-Dauerlicht</li>
 			<li>sehr aufwendige Setups möglich</li>
 		</ul>
-		<div class="price">350,00 <span>Euro</span></div>
+		<div class="price">450,00 <span>Euro</span></div>
 	</main>
 </template>
 <style scoped>
-h3 {
-	border-top: 1px solid #AAAAAA;
-	padding-top: 10px !important;
-}
+	h3 {
+		border-top: 1px solid #AAAAAA;
+		padding-top: 30px !important;
+	}
 </style>
+<script lang="ts">
+import { defineComponent } from "vue";
+import { useTeaserImage } from '@/useTeaserImage'
+import BreadcrumbNavigation from '@/components/BreadcrumbNavigation.vue'
+export default defineComponent({
+	name: "Startseite",
+	components: { BreadcrumbNavigation },
+	setup() {
+		const { setImage } = useTeaserImage();
+		setImage("../src/assets/teaser-images/kinder.jpg");
+	}
+});
+</script>

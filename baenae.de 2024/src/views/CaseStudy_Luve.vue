@@ -1,28 +1,31 @@
 <template>
 	<main>
-		<h2>Case Study</h2>
-		<h1>Luve</h1>
+		<BreadcrumbNavigation :links="[{ url: '/portfolio', text: 'Portfolio' }, { url: '/portfolio-business', text: 'Business Case Studies' }]" />
+		<h1>LUVE</h1>
 		<p>
-			Moin, ich bin Bänä, Fotograf aus Bremen.
+			MADE WITH LUVE ist zu 100% pflanzlich. Bilder für die Webseite und Social Media.
 		</p>
 
-		<img
-			class="contentImage"
-			src="../assets/content-images/home.jpg"
-			alt="Foto von Baenae auf einer Couch mit Blitzlichern"
-			title="Baenae"
-		>
-
-		<p>
-			Auf dieser Seite präsentiere ich dir meine Arbeit und meine Leistungen, die du bei mir bekommen kannst.
-			Möchtest du ein Shooting? Für dich, deine Familie, deine Firma, deine Band oder deinen Verein?
-		</p>
-		<p>
-			Dann bist du bei mir goldrichtig. Mit meiner ruhigen und gelassenen Art schaffe ich für dich das perfekte Shooting.
-		</p>
+		<ImageGallery
+			:imageCount="6"
+			imageAltText="Foto von LUVE"
+			imageString="casestudy-luve"
+		/>
 	</main>
 </template>
-<script
-	setup
-	lang="ts">
+<script lang="ts">
+import { defineComponent } from "vue";
+import CaseStudy from '@/components/ImageGallery.vue'
+import ImageGallery from '@/components/ImageGallery.vue'
+import BreadcrumbNavigation from '@/components/BreadcrumbNavigation.vue'
+import { useTeaserImage } from '@/useTeaserImage'
+
+export default defineComponent({
+	name: "CaseStudy_Luve",
+	components: { BreadcrumbNavigation, ImageGallery, CaseStudy },
+	setup() {
+		const { setImage } = useTeaserImage();
+		setImage("../src/assets/teaser-images/luve.jpg");
+	}
+});
 </script>

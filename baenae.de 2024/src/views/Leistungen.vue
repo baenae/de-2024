@@ -1,6 +1,6 @@
 <template>
 	<main>
-		<h2>Das kannst du von mir erwarten.</h2>
+		<BreadcrumbNavigation />
 		<h1>Leistungen</h1>
 
 		<TeaserLink
@@ -33,8 +33,17 @@
 
 	</main>
 </template>
-<script
-	setup
-	lang="ts">
+<script lang="ts">
+import { defineComponent } from "vue";
+import { useTeaserImage } from '@/useTeaserImage'
+import BreadcrumbNavigation from '@/components/BreadcrumbNavigation.vue'
 import TeaserLink from '@/components/TeaserLink.vue'
+export default defineComponent({
+	name: "Startseite",
+	components: { TeaserLink, BreadcrumbNavigation },
+	setup() {
+		const { setImage } = useTeaserImage();
+		setImage("../src/assets/teaser-images/essigfabrik_sofa.jpg");
+	}
+});
 </script>

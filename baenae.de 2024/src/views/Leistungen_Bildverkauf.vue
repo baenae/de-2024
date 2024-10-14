@@ -1,6 +1,6 @@
 <template>
 	<main>
-		<h2>Leistungen</h2>
+		<BreadcrumbNavigation :links="[{ url: '/leistungen', text: 'Leistungen' }]" />
 		<h1>Bildverkauf</h1>
 		<p>
 			Moin, du hättest gerne ein Poster von einem meiner Fotos?
@@ -25,7 +25,16 @@
 		</p>
 	</main>
 </template>
-<script
-	setup
-	lang="ts">
+<script lang="ts">
+import { defineComponent } from "vue";
+import { useTeaserImage } from '@/useTeaserImage'
+import BreadcrumbNavigation from '@/components/BreadcrumbNavigation.vue'
+export default defineComponent({
+	name: "Startseite",
+	components: { BreadcrumbNavigation },
+	setup() {
+		const { setImage } = useTeaserImage();
+		setImage("../src/assets/teaser-images/weserstadion.jpg");
+	}
+});
 </script>

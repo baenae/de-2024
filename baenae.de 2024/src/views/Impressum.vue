@@ -1,6 +1,6 @@
 <template>
 	<main>
-		<h2>Alles was du wissen musst</h2>
+		<BreadcrumbNavigation />
 		<h1>Impressum</h1>
 		<p>
 			Die folgenden Angaben entsprechen den Vorgaben von § 5 TMG:
@@ -37,6 +37,17 @@
 		</p>
 	</main>
 </template>
-<script setup lang="ts">
-	import { RouterLink } from 'vue-router'
+<script lang="ts">
+import { defineComponent } from "vue";
+import BreadcrumbNavigation from '@/components/BreadcrumbNavigation.vue'
+import { useTeaserImage } from '@/useTeaserImage'
+
+export default defineComponent({
+	name: "Impressum",
+	components: { BreadcrumbNavigation },
+	setup() {
+		const { setImage } = useTeaserImage();
+		setImage("../src/assets/teaser-images/essigfabrik_hinten.jpg");
+	}
+});
 </script>

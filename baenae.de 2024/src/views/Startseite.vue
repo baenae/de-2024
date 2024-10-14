@@ -22,7 +22,15 @@
 		</p>
 	</main>
 </template>
-<script
-	setup
-	lang="ts">
+<script lang="ts">
+import { defineComponent } from "vue";
+import { useTeaserImage } from '@/useTeaserImage'
+
+export default defineComponent({
+	name: "Startseite",
+	setup() {
+		const { setImage } = useTeaserImage();
+		setImage("../src/assets/teaser-images/nebel_hohentorshafen.jpg");
+	}
+});
 </script>

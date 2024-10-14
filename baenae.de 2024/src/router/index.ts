@@ -20,6 +20,9 @@ import CaseStudy_Geerds from '@/views/CaseStudy_Geerds.vue'
 import CaseStudy_MJ from '@/views/CaseStudy_MJ.vue'
 import CaseStudy_GutesEis from '@/views/CaseStudy_GutesEis.vue'
 import CaseStudy_Luve from '@/views/CaseStudy_Luve.vue'
+import CaseStudy_Dotyk from '@/views/CaseStudy_Dotyk.vue'
+import Portfolio_Babybauch from '@/views/Portfolio_Babybauch.vue'
+import Portfolio_Hochzeit from '@/views/Portfolio_Hochzeit.vue'
 
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
@@ -90,6 +93,16 @@ const router = createRouter({
 			component: Portfolio_Business
 		},
 		{
+			path: '/portfolio-babybauch',
+			name: 'portfolio-babybauch',
+			component: Portfolio_Babybauch
+		},
+		{
+			path: '/portfolio-hochzeit',
+			name: 'portfolio-hochzeit',
+			component: Portfolio_Hochzeit
+		},
+		{
 			path: '/portfolio-portraits',
 			name: 'portfolio-portraits',
 			component: Portfolio_Portraits
@@ -112,7 +125,7 @@ const router = createRouter({
 		{
 			path: '/casestudy-dotyk',
 			name: 'casestudy-dotyk',
-			component: CaseStudy_Teestuebchen
+			component: CaseStudy_Dotyk
 		},
 		{
 			path: '/casestudy-geerds',

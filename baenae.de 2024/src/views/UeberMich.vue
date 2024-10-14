@@ -1,6 +1,6 @@
 <template>
 	<main>
-		<h2>Moin moin</h2>
+		<BreadcrumbNavigation />
 		<h1>Über mich</h1>
 		<p>
 			ich bin Benjamin aus Bremen, werde aber von allen Bänä (ausgesprochen Bene) genannt. Ich bin 44 Jahre alt und wohne im schönen Bremen Woltmershausen. Und ja, Woltmershausen hat wirklich schöne Ecken.
@@ -15,7 +15,17 @@
 		<img src="../assets/content-images/ueber-mich.jpg" class="contentImage">
 	</main>
 </template>
-<script
-	setup
-	lang="ts">
+<script lang="ts">
+import { defineComponent } from "vue";
+import BreadcrumbNavigation from '@/components/BreadcrumbNavigation.vue'
+import { useTeaserImage } from '@/useTeaserImage'
+
+export default defineComponent({
+	name: "Impressum",
+	components: { BreadcrumbNavigation },
+	setup() {
+		const { setImage } = useTeaserImage();
+		setImage("../src/assets/teaser-images/hafen-portrait-blau.jpg");
+	}
+});
 </script>

@@ -1,7 +1,7 @@
 <template>
 	<main>
-		<h2>Wichtig</h2>
-		<h1>Datenschutzerklärung</h1>
+		<BreadcrumbNavigation />
+		<h1 class="small">Datenschutzerklärung</h1>
 		<p>
 			Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
 			Benjamin Sasse (siehe Webseitenbetreiber).
@@ -35,7 +35,7 @@
 		</p>
 
 		<h3>Cookies</h3>
-		<p>todo todo todo todo todo todo todo todo todo todo </p>
+		<p>Es handelt sich um eine rein statische Webseite und es werden keine Cookies gespeichert.</p>
 
 		<h3>Recht auf Auskunft, Berichtigung, Sperrung, Löschung</h3>
 		<p>
@@ -87,6 +87,7 @@
 			einzubinden und/oder das Tool anzubieten.
 		</p>
 
+		<!--
 		<h3>Nutzung von Google Analytics</h3>
 		<p>
 			Wir verwenden Google Analytics, um die Website-Nutzung zu analysieren. Die daraus gewonnenen Daten werden genutzt, um unsere Website sowie Werbemaßnahmen zu optimieren.
@@ -123,9 +124,21 @@
 		<p>
 			Sollten Sie mit der Erfassung nicht einverstanden sein, können Sie diese mit der einmaligen Installation des Browser-Add-ons zur Deaktivierung von Google Analytics unterbinden <a href="https://tools.google.com/dlpage/gaoptout?hl=de" target="_blank">https://tools.google.com/dlpage/gaoptout?hl=de</a>
 		</p>
+		-->
 	</main>
 </template>
-<script
-	setup
-	lang="ts">
+<script lang="ts">
+import { defineComponent } from "vue";
+import BreadcrumbNavigation from '@/components/BreadcrumbNavigation.vue'
+import { useTeaserImage } from '@/useTeaserImage'
+
+export default defineComponent({
+	name: "DatenSchutz",
+	components: { BreadcrumbNavigation },
+	setup() {
+		const { setImage } = useTeaserImage();
+		setImage("../src/assets/teaser-images/sonnenbrille.jpg");
+	}
+});
 </script>
+

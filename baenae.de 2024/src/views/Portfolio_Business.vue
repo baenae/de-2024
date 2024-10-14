@@ -1,7 +1,7 @@
 <template>
 	<main>
-		<h2>Portfolio - Case Studies</h2>
-		<h1>Business Fotografie</h1>
+		<BreadcrumbNavigation :links="[{ url: '/portfolio', text: 'Portfolio' }]" />
+		<h1>Business Case Studies</h1>
 
 		<TeaserLink
 			:top-line="false"
@@ -48,10 +48,24 @@
 			image="./src/assets/teaser-link-images/casestudies_luve.jpg"
 			headline="Luve"
 			text="MADE WITH LUVE ist zu 100% pflanzlich. Bilder für die Webseite und Social Media."
-			link="baustelle"
+			link="casestudy-luve"
 		/>
 	</main>
 </template>
-<script setup lang="ts">
+<script lang="ts">
+import { defineComponent } from "vue";
 import TeaserLink from '@/components/TeaserLink.vue'
+import CaseStudy from '@/components/ImageGallery.vue'
+import ImageGallery from '@/components/ImageGallery.vue'
+import BreadcrumbNavigation from '@/components/BreadcrumbNavigation.vue'
+import { useTeaserImage } from '@/useTeaserImage'
+
+export default defineComponent({
+	name: "Portfolio_Business",
+	components: { BreadcrumbNavigation, ImageGallery, CaseStudy, TeaserLink },
+	setup() {
+		const { setImage } = useTeaserImage();
+		setImage("../src/assets/teaser-images/cassandra.jpg");
+	}
+});
 </script>

@@ -2,6 +2,9 @@
 	<div id="sidemenu">
 		<transition name="translateX">
 			<nav v-show="navOpen">
+				<div class="title" v-on:click="openPage('/')">
+					Bänä Fotografie
+				</div>
 				<div class="sidemenuWrapper">
 					<ul>
 						<li>
@@ -17,9 +20,11 @@
 						<li>
 							<span v-on:click="openPage('/portfolio')">Portfolio</span>
 							<ul>
-								<li v-on:click="openPage('/portfolio-business')">Business</li>
+								<li v-on:click="openPage('/portfolio-business')">Business Case Studies</li>
 								<li v-on:click="openPage('/portfolio-portraits')">Portraits</li>
 								<li v-on:click="openPage('/portfolio-akt')">Akt</li>
+								<li v-on:click="openPage('/portfolio-babybauch')">Babybauch</li>
+								<li v-on:click="openPage('/portfolio-hochzeit')">Hochzeit, Paare & Familie</li>
 								<li v-on:click="openPage('/portfolio-stadtlandschaft')">Stadt & Landschaft</li>
 							</ul>
 						</li>
@@ -28,6 +33,10 @@
 						</li>
 						<li>
 							<span v-on:click="openPage('/kontakt')">Kontakt</span>
+							<ul>
+								<li v-on:click="openPage('/impressum')">Impressum</li>
+								<li v-on:click="openPage('/datenschutz')">Datenschutzerklärung</li>
+							</ul>
 						</li>
 					</ul>
 				</div>
@@ -100,13 +109,12 @@
 			top: 0;
 			right: 15px;
 
-			color: black;
-			background-color: white;
+			background-color: transparent;
 
 			width: 50px;
 			height: 50px;
 			border: none;
-			z-index: 10000;
+			z-index: 1000;
 			appearance: none;
 			cursor: pointer;
 			outline: none;
@@ -134,6 +142,10 @@
 			}
 
 			&.active{
+				span {
+					background: white;
+				}
+
 				.top {
 					transform: rotate(-45deg);
 				}
@@ -150,10 +162,9 @@
 
 	#sidemenu {
 		nav {
-			width: 250px;
-			height: 100vh;
-
-			padding: 25px 25px 50px 25px;
+			width: 300px;
+			height: 100%;
+			min-height: 100vh;
 
 			background: white;
 			position: absolute;
@@ -161,16 +172,29 @@
 			right: 0;
 			z-index: 99;
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.30);
-			border-radius: 0 0 0 10px;
+
+			.title {
+				font-family: "Playfair Display", serif;
+				font-size: 18px;
+				line-height: 18px;
+				font-weight: bold;
+				text-transform: uppercase;
+				color: white;
+				background-color: #625857;
+				padding: 40px 0 40px 32px;
+
+				cursor: pointer;
+			}
 
 			.sidemenuWrapper {
+				padding: 20px 0 50px 32px;
 				ul {
 					li {
 						list-style:none;
-						padding: 10px 0 10px 0;
+						padding: 8px 0 8px 0;
+						padding: 8px 0 8px 0;
 
 						cursor: pointer;
-
 						font-family: Roboto;
 
 						span {
@@ -188,16 +212,29 @@
 							text-decoration: underline;
 						}
 
+						border-bottom: 1px solid #CCCCCC;
+						width: 240px;
+
+						:last-child {
+							border-bottom: none;
+						}
+
 						ul {
 							padding: 5px 0 0 20px;
 
 							li {
-								padding: 5px 0 5px 0;
+								margin-bottom: 0;
+								padding: 4px 0 4px 0;
 								font-weight: normal;
 								text-transform: none;
+								border-bottom: none;
 							}
 						}
 
+					}
+
+					li:last-child {
+						border-bottom: none;
 					}
 				}
 			}

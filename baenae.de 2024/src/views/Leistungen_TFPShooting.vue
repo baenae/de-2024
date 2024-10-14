@@ -1,9 +1,9 @@
 <template>
 	<main>
-		<h2>Leistungen</h2>
+		<BreadcrumbNavigation :links="[{ url: '/leistungen', text: 'Leistungen' }]" />
 		<h1>TFP Shooting</h1>
 
-		<p>Was ist ein TFP Shooting?</p>
+		<h3>Was ist ein TFP Shooting?</h3>
 		<p>
 			Wir machen zusammen Fotos und es geht nicht um Geld.
 			Am Ende verdient niemand daran und alle Akteur:innen werden mit den fertigen Fotos entlohnt.
@@ -89,8 +89,16 @@
 		</p>
 	</main>
 </template>
-<script
-	setup
-	lang="ts">
-import TeaserLink from '@/components/TeaserLink.vue'
+<script lang="ts">
+import { defineComponent } from "vue";
+import { useTeaserImage } from '@/useTeaserImage'
+import BreadcrumbNavigation from '@/components/BreadcrumbNavigation.vue'
+export default defineComponent({
+	name: "Startseite",
+	components: { BreadcrumbNavigation },
+	setup() {
+		const { setImage } = useTeaserImage();
+		setImage("../src/assets/teaser-images/franzi_gelb.jpg");
+	}
+});
 </script>

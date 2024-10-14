@@ -1,6 +1,6 @@
 <template>
 	<main>
-		<h2>So erreichst du mich</h2>
+		<BreadcrumbNavigation />
 		<h1>Kontakt</h1>
 		<p>Einfach über E-Mail, WhatsApp, Telefon oder Instagram.</p>
 
@@ -24,7 +24,17 @@
 		</ul>
 	</main>
 </template>
-<script
-	setup
-	lang="ts">
+<script lang="ts">
+import { defineComponent } from "vue";
+import BreadcrumbNavigation from '@/components/BreadcrumbNavigation.vue'
+import { useTeaserImage } from '@/useTeaserImage'
+
+export default defineComponent({
+	name: "Impressum",
+	components: { BreadcrumbNavigation },
+	setup() {
+		const { setImage } = useTeaserImage();
+		setImage("../src/assets/teaser-images/viertel-baenae.jpg");
+	}
+});
 </script>
