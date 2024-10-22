@@ -49,6 +49,7 @@ export default defineComponent({
 	gap: 16px;
 	flex-wrap: wrap;
 	flex-direction: row;
+	margin: 10px 0 30px 0;
 
 	img {
 		width: calc(50% - 8px) !important;

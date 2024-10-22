@@ -11,6 +11,7 @@
 			imageString="akt-sw"
 		/>
 
+		<!--
 		<h3>Projekt Gold</h3>
 		<ImageGallery
 			:reverse="true"
@@ -18,10 +19,10 @@
 			imageAltText="Aktfotografie"
 			imageString="akt-gold"
 		/>
+		-->
 
 		<h3>Akt in Farbe</h3>
 		<ImageGallery
-			:reverse="true"
 			:imageCount="6"
 			imageAltText="Aktfotografie"
 			imageString="akt-farbe"

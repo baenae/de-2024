@@ -3,7 +3,6 @@
 		<BreadcrumbNavigation :links="[{ url: '/portfolio', text: 'Portfolio' }]" />
 		<h1>Babybauch Fotos</h1>
 		<ImageGallery
-			:reverse="true"
 			:imageCount="6"
 			imageAltText="Portraits in Farbe"
 			imageString="babybauch"

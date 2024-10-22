@@ -4,7 +4,6 @@
 		<h1>Portrait Fotografie</h1>
 		<h3>Studio Portraits</h3>
 		<ImageGallery
-			:reverse="true"
 			:imageCount="6"
 			imageAltText="Portraits in Farbe"
 			imageString="portrait-studio"
@@ -12,7 +11,6 @@
 
 		<h3>Schwarzweiß Portraits</h3>
 		<ImageGallery
-			:reverse="true"
 			:imageCount="6"
 			imageAltText="Portraits in Schwarzweis"
 			imageString="portrait-sw"
@@ -20,7 +18,6 @@
 
 		<h3>Outdoor Portraits</h3>
 		<ImageGallery
-			:reverse="true"
 			:imageCount="6"
 			imageAltText="Outdoor Portraits"
 			imageString="portrait-outdoor"
@@ -39,7 +36,7 @@ export default defineComponent({
 	components: { BreadcrumbNavigation, ImageGallery, CaseStudy },
 	setup() {
 		const { setImage } = useTeaserImage();
-		setImage("../src/assets/teaser-images/skates.jpg");
+		setImage("../src/assets/teaser-images/julia.jpg");
 	}
 });
 </script>

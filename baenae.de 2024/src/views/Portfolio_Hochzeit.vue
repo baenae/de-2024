@@ -10,7 +10,6 @@
 
 		<h3>Hochzeitsfotos</h3>
 		<ImageGallery
-			:reverse="true"
 			:imageCount="6"
 			imageAltText="Hochzeitsfotos"
 			imageString="hochzeit"
@@ -18,7 +17,6 @@
 
 		<h3>Familie & Paare</h3>
 		<ImageGallery
-			:reverse="true"
 			:imageCount="6"
 			imageAltText="Paar-Portraits"
 			imageString="paare"

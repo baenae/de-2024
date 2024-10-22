@@ -4,7 +4,6 @@
 		<h1>Stadt & Landschaft</h1>
 		<h3>Bremen</h3>
 		<ImageGallery
-			:reverse="true"
 			:imageCount="6"
 			imageAltText="Bremen"
 			imageString="stadtland-bremen"
@@ -12,7 +11,6 @@
 
 		<h3>Am Meer</h3>
 		<ImageGallery
-			:reverse="true"
 			:imageCount="6"
 			imageAltText="Meer"
 			imageString="stadtland-meer"
@@ -20,7 +18,6 @@
 
 		<h3>Unterwegs in der Welt</h3>
 		<ImageGallery
-			:reverse="true"
 			:imageCount="6"
 			imageAltText="Urlaub"
 			imageString="stadtland-urlaub"

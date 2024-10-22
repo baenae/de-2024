@@ -3,7 +3,11 @@
 		<BreadcrumbNavigation :links="[{ url: '/portfolio', text: 'Portfolio' }, { url: '/portfolio-business', text: 'Business Case Studies' }]" />
 		<h1>LUVE</h1>
 		<p>
-			MADE WITH LUVE ist zu 100% pflanzlich. Bilder für die Webseite und Social Media.
+			Für die Lebensmittelmarke Luve habe ich ansprechende Fotos für die Social-Media-Präsenz erstellt.
+			Die Aufnahmen zeigen die neuen pflanzlichen Produkte und vermitteln deren Vielfalt und Frische.
+		</p>
+		<p>
+			Die Bilder unterstützen die Kommunikation der Marke und sprechen eine breite Zielgruppe an.
 		</p>
 
 		<ImageGallery

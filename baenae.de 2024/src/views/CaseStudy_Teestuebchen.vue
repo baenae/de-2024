@@ -3,7 +3,16 @@
 		<BreadcrumbNavigation :links="[{ url: '/portfolio', text: 'Portfolio' }, { url: '/portfolio-business', text: 'Business Case Studies' }]" />
 		<h1 class="small">Teestübchen im Schnoor</h1>
 		<p>
-			Bilder für die Webseite und Social Media für das Teestübchen im Schnoor.
+			Für das charmante Teestübchen im Schnoor in Bremen durfte ich die einzigartige Atmosphäre dieses besonderen Cafés einfangen.
+			Das Shooting umfasste nicht nur Aufnahmen der gemütlichen Innenräume,
+			sondern auch Portraits des engagierten Teams und detailreiche Bilder des vielfältigen Tee- und Speisenangebots.
+		</p>
+
+		<p>
+			Ziel war es, die heimelige Stimmung des Cafés und die herzliche Gastfreundschaft der Mitarbeitenden visuell zu transportieren –
+			perfekt für die Nutzung auf ihrer Webseite und Social Media.
+			Die Bilder spiegeln den Charakter des Teestübchens wider:
+			Ein Ort zum Wohlfühlen und Genießen, mitten im historischen Schnoor-Viertel.
 		</p>
 
 		<ImageGallery
@@ -11,6 +20,10 @@
 			imageAltText="Foto vom Teestübchen im Schnoor"
 			imageString="casestudy-teestuebchen"
 		/>
+
+		<p>
+			Seht euch mehr Ergebnisse auf ihrer Webseite an: <a href="https://teestuebchen-schnoor.de/" target="_blank">Teestübchen im Schnoor</a>.
+		</p>
 	</main>
 </template>
 <script lang="ts">

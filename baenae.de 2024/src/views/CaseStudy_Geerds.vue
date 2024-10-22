@@ -3,7 +3,18 @@
 		<BreadcrumbNavigation :links="[{ url: '/portfolio', text: 'Portfolio' }, { url: '/portfolio-business', text: 'Business Case Studies' }]" />
 		<h1 class="small">Geerds Unternehmensberatung</h1>
 		<p>
-			Bilder für die Webseite und Social Media für das Geerds Unternehmesberatung.
+			Für Geerds Unternehmensberatung habe ich ein professionelles Shooting mit Inhaber Arno Geerds durchgeführt.
+			Die Beratung zeichnet sich durch unabhängige und neutrale betriebs- und finanzwirtschaftliche Expertise aus.
+		</p>
+
+		<p>
+			Die entstandenen Portraits vermitteln Vertrauen und Professionalität,
+			ideal für die Webseite und andere Kommunikationskanäle.
+			Sie spiegeln die Philosophie der Unternehmensberatung wider und unterstützen die Markenpräsenz von Geerds.
+		</p>
+
+		<p>
+			Erfahrt mehr auf der Webseite: <a href="https://geerds.net/" target="_blank">Geerds Unternehmensberatung</a>.
 		</p>
 
 		<ImageGallery

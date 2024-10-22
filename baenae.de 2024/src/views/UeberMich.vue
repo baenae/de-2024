@@ -12,7 +12,7 @@
 			Hobbies habe ich viele. Also neben der Fotografie. Manche Menschen sagen sogar zu viele. Warhammer ist z.B. eines davon. Früher auch das Malen, aber ich habe den Pinsel gegen die Kamera getauscht.
 		</p>
 
-		<img src="../assets/content-images/ueber-mich.jpg" class="contentImage">
+		<img src="../assets/content-images/aboutme_1.jpg" class="contentImage">
 	</main>
 </template>
 <script lang="ts">

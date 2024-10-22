@@ -3,7 +3,9 @@
 		<BreadcrumbNavigation :links="[{ url: '/portfolio', text: 'Portfolio' }, { url: '/portfolio-business', text: 'Business Case Studies' }]" />
 		<h1>Gutes Eis</h1>
 		<p>
-			Premium-Manufaktur-BIO-Eis aus Bremen für nachhaltigen Genuss. Bilder für die Webseite und Social Media.
+			Für die Eismarke gutes eis durfte ich ein lebhaftes Shooting in ihrer Eisdiele in Bremen realisieren.
+			Gemeinsam mit einigen Laienmodellen und dem Chef haben wir ein fröhliches und entspanntes Shooting durchgeführt,
+			das viele tolle Bilder hervorgebracht hat.
 		</p>
 
 		<ImageGallery
@@ -11,6 +13,11 @@
 			imageAltText="Foto von Gutes Eis"
 			imageString="casestudy-guteseis"
 		/>
+
+		<p>
+			Die entstandenen Aufnahmen fangen die Freude und den Genuss des Eises perfekt ein und werden für die Webseite sowie die Social-Media-Präsenz genutzt.
+			Überzeugt euch selbst: <a href="https://guteseis.de/" target="_blank">guteseis.de</a>.
+		</p>
 	</main>
 </template>
 <script lang="ts">

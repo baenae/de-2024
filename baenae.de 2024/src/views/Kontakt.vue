@@ -2,9 +2,10 @@
 	<main>
 		<BreadcrumbNavigation />
 		<h1>Kontakt</h1>
-		<p>Einfach über E-Mail, WhatsApp, Telefon oder Instagram.</p>
+		<p>Egal, ob du Fragen hast oder direkt einen Termin vereinbaren möchtest – ich stehe dir jederzeit zur Verfügung. </p>
+		<p>Du erreichst mich ganz unkompliziert per E-Mail, WhatsApp, Telefon oder Instagram. Gemeinsam finden wir den perfekten Zeitpunkt für dein Shooting.</p>
 
-		<img src="../assets/content-images/kontakt.jpg" class="contentImage">
+		<img src="../assets/content-images/aboutme_3.jpg" alt="baenae" class="contentImage">
 
 		<ul>
 			<li>E-Mail: baenae@gmx.de</li>
@@ -34,7 +35,7 @@ export default defineComponent({
 	components: { BreadcrumbNavigation },
 	setup() {
 		const { setImage } = useTeaserImage();
-		setImage("../src/assets/teaser-images/viertel-baenae.jpg");
+		setImage("../src/assets/teaser-images/sonnenbrille.jpg");
 	}
 });
 </script>

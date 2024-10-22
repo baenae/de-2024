@@ -3,28 +3,30 @@
 		<BreadcrumbNavigation :links="[{ url: '/leistungen', text: 'Leistungen' }]" />
 		<h1>Business-Shooting</h1>
 
-		<p>Egal ob Start-Up, großes Unternehmen, Band oder Gastro, ich bin der richtige für euch.</p>
+		<p>Ob Start-up, etabliertes Unternehmen, Band oder Gastronomie – ich bin euer Partner für professionelle Business-Fotografie.</p>
 
+		<p>Meine Leistungen umfassen:</p>
 		<ul>
-			<li>Fertig aufbereitete Formate für:</li>
+			<li>Bereitstellung fertiger Formate für:</li>
 			<li>
 				<ul>
 					<li>Webseiten</li>
-					<li>Social-Media</li>
+					<li>Social Media</li>
 					<li>Poster</li>
 					<li>Prospekte</li>
 					<li>Flyer</li>
 				</ul>
 			</li>
-			<li>Shooting von Büro, Arbeitsplätzen und Werkstätten</li>
+			<li>Fotos von Büros, Arbeitsplätzen oder Werkstätten</li>
 			<li>Portraits von Führungskräften und Mitarbeitenden, z.B.:</li>
 			<li>
 				<ul>
 					<li>während der Arbeit</li>
-					<li>Nachstellen von Meeting, Verkaufs- und Beratungsstituationen</li>
+					<li>in realistischen Meeting-, Verkaufs- oder Beratungssituationen</li>
 				</ul>
 			</li>
 		</ul>
+		<p>Lasst uns gemeinsam die Atmosphäre eures Unternehmens authentisch und überzeugend in Szene setzen.</p>
 
 		<TeaserLink
 			:top-line="true"

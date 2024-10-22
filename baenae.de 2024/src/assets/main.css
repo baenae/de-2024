@@ -135,7 +135,7 @@ body {
                     }
 
                     a {
-                        padding-top: 0px;
+                        padding-top: 0;
                         font-size: 13px;
                     }
                 }
@@ -144,7 +144,7 @@ body {
                     font-family: "Playfair Display", serif;
                     margin: 20px 0 5px 0;
                     font-size: 18px;
-                    font-weight: bold;
+                    font-weight: normal;
                 }
 
                 p {
@@ -203,7 +203,7 @@ body {
                     color: black;
                     padding: 5px 15px 5px 15px;
 
-                    font-family: Roboto;
+                    font-family: Roboto, sans-serif;
                     text-decoration: none;
 
                     border-radius: 25px;

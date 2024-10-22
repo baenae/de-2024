@@ -137,7 +137,7 @@ export default defineComponent({
 	components: { BreadcrumbNavigation },
 	setup() {
 		const { setImage } = useTeaserImage();
-		setImage("../src/assets/teaser-images/sonnenbrille.jpg");
+		setImage("../src/assets/teaser-images/treppe.jpg");
 	}
 });
 </script>

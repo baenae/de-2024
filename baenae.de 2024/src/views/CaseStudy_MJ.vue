@@ -3,7 +3,16 @@
 		<BreadcrumbNavigation :links="[{ url: '/portfolio', text: 'Portfolio' }, { url: '/portfolio-business', text: 'Business Case Studies' }]" />
 		<h1>Lettering by MJ</h1>
 		<p>
-			Bilder für die Webseite und für Social Media für das Lettering by Martina Johanna.
+			Für Martina Johanna, eine talentierte Künstlerin im Bereich Hand Lettering,
+			durfte ich Portraitaufnahmen erstellen, die ihre Kreativität und Persönlichkeit widerspiegeln.
+			Martina bietet nicht nur individuelle Hand Lettering-Auftragsarbeiten an,
+			sondern leitet auch inspirierende Workshops.
+		</p>
+		<p>
+			Ziel des Shootings war es, authentische und ansprechende Bilder zu kreieren,
+			die Martinas Leidenschaft für ihre Kunst zum Ausdruck bringen und gleichzeitig ihre Professionalität unterstreichen.
+			Diese Portraits werden auf ihrer Webseite und in ihrer Kommunikation genutzt,
+			um ihre Workshops und Auftragsarbeiten visuell zu unterstützen.
 		</p>
 
 		<ImageGallery
@@ -11,6 +20,10 @@
 			imageAltText="Foto von Lettering mit Martina Johanna"
 			imageString="casestudy-mj"
 		/>
+
+		<p>
+			Seht euch mehr Ergebnisse auf ihrer Webseite an: <a href="https://lettering-by-mj.com/" target="_blank">Lettering by MJ.</a>.
+		</p>
 	</main>
 </template>
 <script lang="ts">

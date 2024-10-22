@@ -8,18 +8,16 @@
 
 		<img
 			class="contentImage"
-			src="../assets/content-images/home.jpg"
+			src="../assets/content-images/aboutme_4.jpg"
 			alt="Foto von Baenae auf einer Couch mit Blitzlichern"
 			title="Baenae"
 		>
 
 		<p>
-			Auf dieser Seite präsentiere ich dir meine Arbeit und meine Leistungen, die du bei mir bekommen kannst.
-			Möchtest du ein Shooting? Für dich, deine Familie, deine Firma, deine Band oder deinen Verein?
+			Willkommen auf meiner Seite, hier findest du nicht nur meine Arbeiten, sondern auch die Leistungen, die ich dir anbieten kann. Egal ob du ein Shooting für dich, deine Familie, dein Unternehmen, deine Band oder deinen Verein suchst – bei mir bist du genau richtig.
 		</p>
 		<p>
-			Dann bist du bei mir goldrichtig. Mit meiner ruhigen und gelassenen Art schaffe ich für dich das perfekte Shooting.
-		</p>
+			Mit meiner entspannten und lockeren Art sorge ich dafür, dass dein Shooting nicht nur stressfrei, sondern auch zu einem besonderen Erlebnis wird. Gemeinsam kreieren wir authentische und einzigartige Bilder, die genau zu dir passen.		</p>
 	</main>
 </template>
 <script lang="ts">
